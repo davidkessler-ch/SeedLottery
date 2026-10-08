@@ -48,7 +48,7 @@ The last word of a BIP39 phrase contains a checksum: the first bits of a SHA-256
 
 For the random part of the last word, draw and toss one more token the same way. Then enter your words on an offline signing device that can calculate the final word, such as [SeedSigner](https://github.com/SeedSigner/seedsigner). If the device asks for the random part as a word, enter the extra word. If it asks for bits or coin flips, take the extra word's position in the list minus one, written as 11 binary digits, and use the first 7 for a 12-word phrase or the first 3 for a 24-word phrase. The device only does the arithmetic; all the randomness is already yours.
 
-Never do this step on a phone, a website or a computer that's online, because whatever calculates the last word sees your whole seed.
+The device that calculates the last word sees your whole seed, so it must stay offline. It must not be connected to the internet while you enter the words, and never afterwards either. A phone, a website or an ordinary computer is not suitable; an air-gapped signing device is.
 
 Don't redraw a phrase because it looks odd. Throwing away draws you don't like makes the result less random.
 
