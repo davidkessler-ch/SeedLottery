@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-SeedLottery - draw a Bitcoin seed phrase by lot, with 3D-printed tokens for all
-2048 BIP39 words.
+SeedLottery - 3D-printed tokens for all 2048 BIP39 words, for picking the words of
+a Bitcoin seed phrase by hand, with randomness that doesn't depend on any device.
 
 Each token carries the first four letters of one BIP39 word on one face and of
 another word on the other face (four letters are unique across the list), so 1024
@@ -801,7 +801,7 @@ class Slicer:
 
 def parse_args(argv):
     parser = argparse.ArgumentParser(
-        description="SeedLottery: print-ready sheets of two-sided BIP39 word tokens, to draw a seed phrase by lot.")
+        description="SeedLottery: print-ready sheets of two-sided BIP39 word tokens.")
     words = parser.add_argument_group("words")
     words.add_argument("--first-word", type=word_number, default=1,
                        help="first word: number (1-2048), word or 4-letter prefix (default: 1)")
